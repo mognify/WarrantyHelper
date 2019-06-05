@@ -8,11 +8,12 @@ public WarrantyAssist{
     URL url = new URL(strURL.replace(":sheetName",sheetName).replace(":spreadsheetId",sheetID);
     try(InputStream is = url.openStream(); JsonReader rdr = Json.createReader(is)){
       JsonObject obj = rdr.readObject();
-      JsonArray results = obj.getJsonArray("data");
+      JsonArray results = obj.getJsonArray("results");
       for (JsonObject result : results.getValuesAs(JsonObject.class)) {
-          System.out.print(result.getJsonObject("from").getString("name"));
-          System.out.print(": ");
-          System.out.println(result.getString("message", ""));
+        System.out.print(result.getJsonObject("from").getString("name"));
+        result.getJsonObject("");
+        System.out.print(": ");
+        System.out.println(result.getString("message", ""));
       }
     }
   }
