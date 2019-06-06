@@ -149,7 +149,7 @@ public class WarrantyHelper {
 					e1.printStackTrace();
 					System.out.println("Sorry, failed to start process from process builder");
 				}
-				// this shit failed, trying web scraping instead
+				// this failed, trying web scraping instead
 				// using jaunt
 				/*UserAgent ua = new UserAgent();
 				String site = "http://api.sheetson.com/v1/sheets/" + txtSheetName.getText() + "?spreadsheetId=" + txtSheetID.getText();
